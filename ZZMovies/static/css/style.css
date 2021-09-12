@@ -1,0 +1,17 @@
+* {
+  background-color: cyan;
+}
+
+span.help-block {
+  color: red;
+  font-size: 12px;
+}
+.myForm label.control-label,
+.myForm div {
+  width: 100%;
+}
+
+p.help-block,
+.myFOrm ul li {
+  font-size: 12px;
+}

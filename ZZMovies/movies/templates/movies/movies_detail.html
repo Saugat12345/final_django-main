@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% block title %}
+<title>Deatil</title>
+<style>
+    .movie_file {
+        width: 100%;
+        height: 300px;
+
+    }
+
+    .movie_banner {
+        width: 270px;
+    }
+
+    .movie_banner img {
+        width: 100%;
+    }
+
+    @media screen and (min-width:620px) {
+        .movie_file {
+            width: 100%;
+            height: 500px;
+
+        }
+
+
+    }
+</style>
+{% endblock %}
+
+{% block main_content %}
+<div class="container-fluid d-flex flex-column mt-5">
+    <div class=" mt-5 m-auto">
+        <video control autoplay class="movie_file m-auto ">
+            <source src="{{ m.file.url }}" type="video/mp4" class=" ">
+        </video>
+    </div>
+    <div class="d-flex  bg-dark justify-content-center">
+        <div class="move_body w-75 d-flex bg-dark gap-5">
+            <span class="movie_banner"><img src="{{m.image.url}}" alt="" class=""></span>
+            <div class="div-flex flex-column w-100">
+                <h1 class="text-center m-auto display-1 pb-2  w-100 text-light">{{m.movie_name}}</h1>
+                <p class=" w-100 text-light">{{m.description}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

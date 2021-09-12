@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+{% load bootstrap %}
+{% block title %}
+<title>Movie Form</title>
+{% endblock title %} {% block main_content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h1 class="text-center">Add New Movie</h1>
+      <div class="card py-2 px-2">
+        <form class="form" action="" method="POST">
+          {% csrf_token %}
+
+          <div class="mb-3">
+            <label for="firstname">Moviename</label>
+            <input type="text" class="form-control" id="moviename" name="moviename" aria-describedby="firstname"
+              placeholder="Enter movie name" />
+          </div>
+          <div class="mb-3">
+            <label for="lastname">Description</label>
+            <input type="textarea" class="form-control" id="description" name="description"
+              aria-describedby="description" placeholder="Enter description of movie" />
+          </div>
+
+          <div class="mb-3">
+            <label for="image_url">file</label>
+            <input type="file" class="form-control" id="file" name="file" aria-describedby="file"
+              placeholder="Enter file " />
+          </div>
+          <div class="mb-3">
+            <label for="image_url">Image</label>
+            <input type="file" class="form-control" id="image" name="image" aria-describedby="image"
+              placeholder="Enter image " />
+          </div>
+
+          <div class="mb-3">
+            <label for="batch">Category</label>
+            <input type="text" class="form-control" id="category" name="category" aria-describedby="category"
+              placeholder="Enter Category" />
+          </div>
+
+          <div class="mb-3">
+            <label for="batch">Production Year</label>
+            <input type="datetime" class="form-control" id="productionyear" name="productionyear"
+              aria-describedby="productionyear" placeholder="Enter Production Year" />
+          </div>
+
+          <div class="mb-3">
+            <label for="batch"> Movie Trailer</label>
+            <input type="url" class="form-control" id="movietrailer" name="movietrailer" aria-describedby="movietrailer"
+              placeholder="Enter Trailer" />
+          </div>
+
+          <button type="submit" class="btn btn-dark">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock main_content %}
